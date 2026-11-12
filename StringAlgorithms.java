@@ -7,7 +7,12 @@ public class StringAlgorithms {
      */
     public static String printCharacters(String word) {
         // TODO: Implement this method
-        return "";
+        int b = word.length();
+        String characters = "";
+        for(int i=0; i<=(b-1); i++) {
+        characters = characters + word.substring(i,(i+1)) + "\n";
+        }
+        return characters; 
     }
 
 
@@ -18,9 +23,13 @@ public class StringAlgorithms {
      */
     public static String reverseWord(String word) {
         // TODO: Implement this method
-        return "";
+        int m = word.length();
+        String letters = "";
+        for(int c=0; c<=(m-1); c++){
+        letters = letters + word.substring((m-1)-c, m-c);
+        }
+        return letters;
     }
-
 
     /**
      * Challenge 3:
@@ -64,11 +73,11 @@ public class StringAlgorithms {
 
         // TODO: Add test calls for each challenge method
         
-        System.out.println("Testing printCharacters:");
+        System.out.println("Testing printCharacters:" + printCharacters("characters"));
         // Example:
         // System.out.println(printCharacters("hello"));
 
-        System.out.println("\nTesting reverseWord:");
+        System.out.println("\nTesting reverseWord:" + reverseWord("letters"));
         // Example:
         // System.out.println(reverseWord("hello"));
 
